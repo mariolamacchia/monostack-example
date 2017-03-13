@@ -2,7 +2,8 @@
 @import <NUKit/NUModule.j>
 @import "../Models/Models.j"
 
-@class SKUsersModule
+@global SKUsersModule
+@global SKLocationsModule
 
 
 @implementation SKConfigurationModule: NUModule
@@ -10,6 +11,7 @@
     @outlet CPButton buttonBack @accessors(readonly);
 
     @outlet SKUsersModule usersModule;
+    @outlet SKLocationsModule locationsModule;
 }
 
 
@@ -38,7 +40,7 @@
     [viewTitleContainer setBackgroundColor:NUSkinColorBlack];
     [viewTitleContainer setBorderBottomColor:nil];
 
-    [self setSubModules:[usersModule]];
+    [self setSubModules:[usersModule, locationsModule]];
 }
 
 @end

@@ -13,3 +13,4 @@ Client/*.xcodeproj
 Client/.cappenvs/*
 
 Client/Models/*
+venv/
